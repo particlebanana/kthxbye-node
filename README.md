@@ -8,13 +8,15 @@ Uses the PUBLISH/SUBSCRIBE functionality of Redis to subscribe to job queues.
 
 ## Requires
 
-[Redis 2.0.1+](http://github.com/antirez/redis), [Socket.io-node](http://github.com/LearnBoost/Socket.IO-node), [kthxbye](http://github.com/plukevdh/kthxbye)
+- [Redis 2.0.1+](http://github.com/antirez/redis)
+- [Socket.io-node](http://github.com/LearnBoost/Socket.IO-node)
+- [kthxbye](http://github.com/plukevdh/kthxbye)
 
 ## Usage
 
 Simple example function for use in client:
 
-    function openSocket(job_id, type) {
+    function openSocket(job_id) {
       // Connect to socket.io
       var socket = new io.Socket('localhost', {port:8081}) 
       if(socket.connect()) {
