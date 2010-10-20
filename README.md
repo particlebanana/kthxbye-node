@@ -8,9 +8,7 @@ Uses the PUBLISH/SUBSCRIBE functionality of Redis to subscribe to job queues.
 
 ## Requires
 
-[Redis 2.0.1+](http://github.com/antirez/redis)
-[Socket.io-node](http://github.com/LearnBoost/Socket.IO-node)
-[kthxbye](http://github.com/plukevdh/kthxbye)
+[Redis 2.0.1+](http://github.com/antirez/redis), [Socket.io-node](http://github.com/LearnBoost/Socket.IO-node), [kthxbye](http://github.com/plukevdh/kthxbye)
 
 ## Usage
 
