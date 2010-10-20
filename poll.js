@@ -6,21 +6,17 @@
 
 var sys = require('sys'),
     http = require('http')
-    io = require('./socket.io-node/lib/socket.io'),
+    io = require('socket.io'),
 
     npm = require('npm'),
     redis = require('redis'),
     
-
     server = http.createServer(),
 
-    redis_client = redis.createClient(6379, "itwebpriv1.hargray.org"),
+    redis_client = redis.createClient(),
     json = JSON.stringify
 
 server.listen(8081)
-
-// socket opens from rails.
-
 var socket = io.listen(server)
 
 // redis connection issue
@@ -36,7 +32,3 @@ redis_client.on("pmessage", function(pattern, channel, message) {
 
 // subscribe to the job notification channels
 redis_client.psubscribe('job.*')
-
-socket.on("connection", function(client) { 
-  //client.send("Connected to Kthxbye notification server to watch job")
-})
